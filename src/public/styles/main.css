@@ -25,6 +25,8 @@
     display: inline-block;
     width: max-content;
     text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
 
     cursor: pointer;
 }
@@ -32,6 +34,14 @@
 .btn--primary{
     background-color: var(--main_orange);
     color: white;
+}
+
+.btn--danger{
+    background-color: rgb(255, 88, 88);
+}
+
+.btn--blue{
+    background-color: rgb(97, 97, 255);
 }
 /*End clases genéricas*/
 
@@ -57,10 +67,18 @@ nav{
     max-width: 50px;
 }
 
+.nav__tohome{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color:black;
+}
+
 /*Estilos de la página inicial*/
 .grid__title{
     text-align: center;
     grid-column: 1/-1;
+    margin-bottom: 12px;
 }
 
 .table-container{
@@ -114,3 +132,11 @@ nav{
     resize: none;
 }
 /*END home form*/
+
+/*Change.ejs styles*/
+.form-container-alone{ /*Cuando el formulario esté solo se posiciona en el centro de la pantalla*/
+    width: 40%;
+    min-width: 400px;
+    margin: 0px auto;
+}
+/*END change.ejs styles*/
