@@ -25,6 +25,8 @@
     display: inline-block;
     width: max-content;
     text-transform: uppercase;
+
+    cursor: pointer;
 }
 
 .btn--primary{

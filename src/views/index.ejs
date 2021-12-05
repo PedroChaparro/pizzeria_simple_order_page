@@ -37,23 +37,23 @@
 
         <div class="form-container">
             <div class="form__card">
-                <form action="">
+                <form action="/add" method="post">
                     <div class="form__group">
-                        <label for="fullname">Fullname</label>
-                        <input type="text" name="fullname" id="" placeholder="Kaidan Stevens" />
+                        <label for="customer_name">Fullname</label>
+                        <input type="text" name="customer_name" id="" placeholder="Kaidan Stevens" />
                     </div>
 
                     <div class="form__group">
-                        <label for="address">Address</label>
-                        <input type="text" name="address" id="" placeholder="Cll 1C #420-980 Arizona" />
+                        <label for="customer_address">Address</label>
+                        <input type="text" name="customer_address" id="" placeholder="Cll 1C #420-980 Arizona" />
                     </div>
                     <div class="form__group">
-                        <label for="phone">Phone number</label>
-                        <input type="number" name="phone" id="" placeholder="3224728523" />
+                        <label for="customer_phone">Phone number</label>
+                        <input type="number" name="customer_phone" id="" placeholder="3224728523" />
                     </div>
                     <div class="form__group">
-                        <label for="pizza">Select your pizza: </label>
-                        <select name="pizza" id="">
+                        <label for="product">Select your pizza: </label>
+                        <select name="product" id="">
                             <option value="Classic pizza" selected>Classic Pizza</option>
                             <option value="Extra Cheese pizza">Extra Cheese Pizza</option>
                             <option value="Vegetarian pizza">Vegetarian Pizza</option>
@@ -62,8 +62,8 @@
                         </select>
                     </div>
                     <div class="form__group">
-                        <label for="comments">Extra comments: </label>
-                        <textarea name="comments" id="comments" wrap="soft" placeholder="E.g: Extra sauce"></textarea>
+                        <label for="customer_comments">Extra comments: </label>
+                        <textarea name="customer_comments" id="comments" wrap="soft" placeholder="E.g: Extra sauce"></textarea>
                     </div>
 
                     <button type="submit" class="btn btn--primary">Add order</button>
