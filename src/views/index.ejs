@@ -18,22 +18,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>0</td>
-                        <td>Test name</td>
-                        <td>Test address</td>
-                        <td>Test phone</td>
-                        <td>Test pizza</td>
-                        <td>No comments here</td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>Test name</td>
-                        <td>Test address</td>
-                        <td>Test phone</td>
-                        <td>Test pizza</td>
-                        <td>No comments here</td>
-                    </tr>
+                    <!--Si se le pasan datos se encarga de ponerlos en diferentes filas-->
+                    <% if(data) { %>
+                        <% for(var i=0; i < data.length; i++) { %>
+                            <tr>
+                                <td><%= data[i].id %></td>
+                                <td><%= data[i].customer_name %></td>
+                                <td><%= data[i].customer_address %></td>
+                                <td><%= data[i].customer_phone %></td>
+                                <td><%= data[i].product %></td>
+                                <td><%= data[i].customer_comments %></td>
+                            </tr>
+                        <% } %>
+                    <% } %>
                 </tbody>
             </table>
         </div>
@@ -58,16 +55,18 @@
                         <label for="pizza">Select your pizza: </label>
                         <select name="pizza" id="">
                             <option value="Classic pizza" selected>Classic Pizza</option>
-                            <option value="Extra Cheese pizza" selected>Extra Cheese Pizza</option>
-                            <option value="Vegetarian pizza" selected>Vegetarian Pizza</option>
-                            <option value="Hawaiian pizza" selected>Hawaiian Pizza</option>
-                            <option value="Bacon pizza" selected>Bacon Pizza</option>
+                            <option value="Extra Cheese pizza">Extra Cheese Pizza</option>
+                            <option value="Vegetarian pizza">Vegetarian Pizza</option>
+                            <option value="Hawaiian pizza">Hawaiian Pizza</option>
+                            <option value="Bacon pizza">Bacon Pizza</option>
                         </select>
                     </div>
                     <div class="form__group">
                         <label for="comments">Extra comments: </label>
-                        <textarea name="comments" id="comments" wrap="soft"></textarea>
+                        <textarea name="comments" id="comments" wrap="soft" placeholder="E.g: Extra sauce"></textarea>
                     </div>
+
+                    <button type="submit" class="btn btn--primary">Add order</button>
                 </form>
             </div>
         </div>
