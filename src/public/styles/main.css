@@ -2,6 +2,20 @@
     --main_orange: #F6BD60;
 }
 
+/*Clases genéricas*/
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0px auto;
+    margin-top: 16px;
+}
+
+.grid-12columns{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+/*End clases genéricas*/
+
 body{
     font-family: 'Montserrat', sans-serif;
 }
