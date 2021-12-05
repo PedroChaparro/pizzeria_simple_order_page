@@ -40,19 +40,27 @@ controller.change = (req, res) => {
 };
 
 controller.update = (req, res) => {
-
-    const { id } = req.params; 
-    const new_data = req.body; 
+    const { id } = req.params;
+    const new_data = req.body;
 
     //Se hace el query para actualizar los datos en la BD
     req.getConnection((err, conn) => {
-
         conn.query('UPDATE orders SET ? WHERE id = ?', [new_data, id], (err, row) => {
             res.redirect('/'); //Cuando actualice lo redirecciona a la ruta raíz
-        }); 
+        });
+    });
+};
 
+controller.remove = (req, res) => {
+
+    const { id } = req.params; 
+
+    req.getConnection((err, conn) => {
+        conn.query('DELETE FROM orders WHERE ID = ?', id, (err, row) => {
+            res.redirect('/'); //Cuando lo elimine, lo redirecciona a la ruta raíz 
+        });  
     }); 
 
-};
+}; 
 
 module.exports = controller;

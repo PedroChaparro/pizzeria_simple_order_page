@@ -10,4 +10,6 @@ router.post('/add', controller.add); //Ruta add que se activa cuadno se da click
 router.get('/change/:id', controller.change); //Ruta para modificar los datos de una orden
 router.post('/update/:id', controller.update);  //Ruta para guardar los cambios aplicados a una orden
 
+router.get('/delete/:id', controller.remove); 
+
 module.exports = router;

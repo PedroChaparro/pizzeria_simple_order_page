@@ -30,7 +30,7 @@
                                 <td><%= data[i].product %></td>
                                 <td><%= data[i].customer_comments %></td>
                                 <td>
-                                    <a href="/delete/<%= data[i].id %>" class="btn btn--danger">Remove</a>
+                                    <a href="/delete/<%= data[i].id %>" class="btn btn--danger remove-btn">Remove</a>
                                     <a href="/change/<%= data[i].id %>" class="btn btn--blue">Update</a>
                                 </td>
                             </tr>
@@ -78,4 +78,6 @@
     </section>
 </main>
 
+<!--Script para mostrar un mensaje de confirmación a la hora de remover una orden-->
+<script src="/scripts/remove_alert.js"></script>
 <%- include('./partials/__footer.ejs') %>
