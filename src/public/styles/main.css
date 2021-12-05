@@ -4,8 +4,8 @@
 
 /*Clases genéricas*/
 .container{
-    width: 80%;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1280px;
     margin: 0px auto;
     margin-top: 16px;
 }
@@ -13,6 +13,7 @@
 .grid-12columns{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
 }
 /*End clases genéricas*/
 
@@ -37,3 +38,61 @@ nav{
 .nav__logo{
     max-width: 50px;
 }
+
+/*Estilos de la página inicial*/
+.grid__title{
+    text-align: center;
+    grid-column: 1/-1;
+}
+
+.table-container{
+    grid-column: 1/8;
+}
+
+.form-container{
+    grid-column: 8/-1;
+}
+
+/*Table*/
+.orders{ 
+    border-collapse: collapse;
+}
+
+.orders, .orders th, .orders td{
+    border: 1px solid black;
+}
+
+.orders thead{
+    background-color: var(--main_orange);
+}
+
+.orders tbody tr:nth-child(even){
+    background-color: rgb(228, 228, 228);
+}
+
+/*END table*/
+
+/*home form*/
+
+.form__card{
+    background-color: rgb(236, 236, 236);
+    padding: 24px 16px;
+    border-radius: 16px;
+}
+
+.form__card form{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form__group{
+    display: flex;
+    flex-direction: column;
+}
+
+#comments{
+    height: 60px; 
+    resize: none;
+}
+/*END home form*/
