@@ -1,0 +1,25 @@
+:root{
+    --main_orange: #F6BD60;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    height: 60px;
+    background-color: var(--main_orange);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__logo{
+    max-width: 50px;
+}
